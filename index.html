@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Zeyada&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.js"
+      integrity="sha512-FSNQjUUq97PtDnAJyMlBTH8EhV4o5X5FLVbzS9ttrdEVVbmrssJBh/PgXFQbxS+6yYx5n5irOj7de6Th0TRQZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="theme-switch">
+      <button class="dark-mode">
+        <svg
+          class="dark"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+          ></path>
+        </svg>
+      </button>
+      <button class="light-mode">
+        <svg
+          class="light"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+    <div class="triangle"></div>
+
+    <div class="container">
+      <div class="login-part">
+        <div class="name">
+          <h1>arrorra</h1>
+        </div>
+        <div class="welcome-msg">
+            <h1>Welcome to <span class="arrorra">Arrorra</span></h1>
+        </div>
+        <div class="login-form">
+            <form>
+                <span><h2 class = "email">Email</h2></span>
+                <input type="text" name="email" id="user-email" placeholder="email@email.com" tabindex="50">
+                <div class="input-password">
+                    <span><h2 class = "password">Password</h2></span>
+                    <input type = "text" id = "user-password" name = "password" placeholder = "xxxxxx">
+                    <br/>
+                    <span><h2 class = "confirm-password">Confirm Password</h2></span>
+                    <input type = "text" id = "confirm-user-password" name = "confirm-password" placeholder = "xxxxxx">
+                </div>
+                <div class="button-error">
+                    <div class="login-btn">
+                        <button type="submit" class = "btn-login-primary" id = "btn">Login</button>
+                        <button type="submit" class = "btn-login-secondary" id = "btn">Login</button>
+                    </div>
+                    <!-- <div class="err-msg" style="padding:0px">
+                        <p class = "error-message">{{ check }}</p>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

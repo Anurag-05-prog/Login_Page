@@ -1,0 +1,223 @@
+:root {
+  --body-bg-color: #222;
+  --square-color: linear-gradient(#303030, #757575);
+  --circle-color: #1cd99d;
+  --triangle-color: #f5f5f5;
+}
+
+[data-theme="light"] {
+  --body-bg-color: F0EFF1;
+  --square-color: linear-gradient(#303030, #757575);
+  --circle-color: #1cd99d;
+  --triangle-color: #654494;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: var(--body-bg-color);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.square,
+.circle,
+.triangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+}
+
+.square {
+  background: var(--square-color);
+}
+
+.circle {
+  background: var(--circle-color);
+  border-radius: 50%;
+}
+
+.triangle {
+  background: var(--triangle-color);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.theme-switch {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dark-mode,
+.light-mode {
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  color: var(--on-primary-alt);
+  border: solid 0.1rem var(--on-primary-alt);
+  border-radius: 0.5rem;
+  font-size: 0.3rem;
+  font-weight: 400;
+  text-align: center;
+  z-index: 3;
+}
+
+.light-mode {
+  display: none;
+}
+
+button:hover {
+  filter: var(--drop-shadow-variant);
+}
+
+.container {
+  padding: 2.5rem;
+  height: 65rem;
+  width: 72rem;
+  border-radius: 3rem;
+  box-shadow: inset 0.3rem 0.3rem 0.2rem rgba(243, 239, 239, 0.256);
+  backdrop-filter: blur(1.03rem);
+  -webkit-backdrop-filter: blur(1.03rem);
+  border: 0.1rem solid rgba(255, 255, 255, 0.18);
+  z-index: 3;
+}
+
+.login-part {
+  margin-left: 4rem;
+}
+
+.name h1 {
+  background: linear-gradient(
+    9deg,
+    rgb(113, 72, 159) 0%,
+    rgb(50, 35, 117) 9%,
+    rgb(60, 50, 144) 20%,
+    rgb(47, 68, 155) 24%,
+    rgb(32, 89, 133) 35%,
+    rgb(46, 141, 156) 44%,
+    rgb(49, 148, 143) 50%,
+    rgb(50, 151, 112) 56%,
+    rgb(60, 168, 123) 75%,
+    rgb(114, 202, 81) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Zeyada;
+  font-size: 5rem;
+  filter: brightness(2.5);
+}
+
+.welcome-msg h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.arrorra {
+  color: #f1c27d;
+}
+
+.email,
+.password,
+.confirm-password {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 100;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+#user-email,
+#user-password,
+#confirm-user-password {
+  border-radius: 0.5rem;
+  background-color: #222;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 1.5rem;
+  height: 3rem;
+  width: 46%;
+  margin-bottom: 2rem;
+  text-overflow: ellipsis;
+}
+
+.password,
+.confirm-password {
+  margin-top: 0.5rem;
+}
+
+#user-email::placeholder,
+#user-password::placeholder,
+#confirm-user-password::placeholder {
+  font-size: 1.6rem;
+}
+
+.login-btn {
+  position: relative;
+  /* display: inline-block; */
+  transform-style: preserve-3d;
+  transition: transform 0.4s;
+}
+
+.btn-login-primary,
+.btn-login-secondary {
+  cursor: pointer;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: large;
+  border: none;
+  width: 46%;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50%);
+  transform: translateY(50%);
+}
+
+.btn-login-secondary {
+  position: absolute;
+  left: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  background-color: #000;
+  color: #fff;
+}
+
+.login-btn button {
+  transition: all 0.4s;
+}
+
+.login-btn .btn-login-secondary {
+  transform: rotateX(-90deg);
+  transform-origin: center;
+}
+
+.login-btn:hover {
+  transform: rotateX(90deg);
+}
+
+.login-btn:hover .btn-login-primary {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.login-btn:hover .btn-login-secondary {
+  opacity: 1;
+}
