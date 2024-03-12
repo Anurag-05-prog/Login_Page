@@ -1,15 +1,8 @@
 :root {
-  --body-bg-color: #222;
+  --body-bg-color: #1f1f1f;
   --square-color: linear-gradient(#303030, #757575);
   --circle-color: #1cd99d;
   --triangle-color: #f5f5f5;
-}
-
-[data-theme="light"] {
-  --body-bg-color: F0EFF1;
-  --square-color: linear-gradient(#303030, #757575);
-  --circle-color: #1cd99d;
-  --triangle-color: #654494;
 }
 
 * {
@@ -23,6 +16,7 @@ html {
 }
 
 body {
+  font-family: Montserrat, sans-serif;
   background: var(--body-bg-color);
   overflow: hidden;
   display: flex;
@@ -58,44 +52,14 @@ body {
   -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-.theme-switch {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.dark-mode,
-.light-mode {
-  cursor: pointer;
-  padding: 0.5rem;
-  width: 3rem;
-  height: 3rem;
-  background-color: #fff;
-  color: var(--on-primary-alt);
-  border: solid 0.1rem var(--on-primary-alt);
-  border-radius: 0.5rem;
-  font-size: 0.3rem;
-  font-weight: 400;
-  text-align: center;
-  z-index: 3;
-}
-
-.light-mode {
-  display: none;
-}
-
-button:hover {
-  filter: var(--drop-shadow-variant);
-}
-
 .container {
   padding: 2.5rem;
-  height: 65rem;
-  width: 72rem;
+  height: 92%;
+  width: 46%;
   border-radius: 3rem;
   box-shadow: inset 0.3rem 0.3rem 0.2rem rgba(243, 239, 239, 0.256);
-  backdrop-filter: blur(1.03rem);
-  -webkit-backdrop-filter: blur(1.03rem);
-  border: 0.1rem solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(2rem);
+  border: 0.1rem solid rgb(255, 255, 255);
   z-index: 3;
 }
 
@@ -128,11 +92,13 @@ button:hover {
 .welcome-msg h1 {
   color: #fff;
   font-size: 3rem;
-  font-weight: 200;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
   margin-bottom: 2rem;
 }
 
 .arrorra {
+  font-weight: 700;
   color: #f1c27d;
 }
 
@@ -140,23 +106,29 @@ button:hover {
 .password,
 .confirm-password {
   color: #fff;
+  font-weight: 400;
   font-size: 2.25rem;
-  font-weight: 100;
+  letter-spacing: 0.15rem;
   margin-bottom: 0.5rem;
 }
 
 #user-email,
 #user-password,
 #confirm-user-password {
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background-color: #222;
   border: 1px solid #fff;
   color: #fff;
+  letter-spacing: 0.2rem;
   padding: 1.5rem;
   height: 3rem;
   width: 46%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-overflow: ellipsis;
+}
+
+#confirm-user-password {
+  margin-bottom: 1rem;
 }
 
 .password,
@@ -178,12 +150,18 @@ button:hover {
 
 .btn-login-primary,
 .btn-login-secondary {
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.2rem;
+  color: #222;
+  color: 1f1f1f;
   cursor: pointer;
   padding: 1.5rem;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
-  font-size: large;
-  font-weight: 500;
+  margin-bottom: 0.8rem;
+  border-radius: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
   border: none;
   width: 46%;
   top: 50%;
@@ -197,7 +175,6 @@ button:hover {
   left: 0.5rem;
   opacity: 0;
   background-color: #f1c27d;
-  color: #000;
 }
 
 .login-btn button {
@@ -223,28 +200,46 @@ button:hover {
 }
 
 hr {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-    border-color: #E5E7EB; 
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  border-color: #e5e7eb;
+}
+
+@media (min-width: 640px) {
+  hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
-  
-  @media (min-width: 640px) {
-    hr {
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
+}
+
+@media (prefers-color-scheme: dark) {
+  hr {
+    border-color: #e2e5ea;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    hr {
-      border-color: #e2e5ea;
-    }
+}
+
+@media (min-width: 1024px) {
+  hr {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    width: 46%;
   }
-  
-  @media (min-width: 1024px) {
-    hr {
-      margin-top: 5rem;
-      margin-bottom: 8rem;
-      width: 46%;
-    }
-  }
+}
+
+.alt-option {
+  cursor: pointer;
+  margin-left: 4rem;
+}
+
+.login-option {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  margin-left: 1.2rem;
+  transform: translateY(70%);
+}
+
+#login-link {
+    color: #f1c27d; 
+    cursor: pointer;
+}
