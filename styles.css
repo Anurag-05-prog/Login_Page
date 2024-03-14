@@ -176,6 +176,10 @@ body {
   font-size: 1.6rem;
 }
 
+input:active {
+  transform: scale(1.005);
+}
+
 .login-btn {
   position: relative;
   transform-style: preserve-3d;
