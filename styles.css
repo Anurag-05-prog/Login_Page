@@ -1,5 +1,5 @@
 :root {
-  --body-bg-color: #1f1f1f;
+  --body-bg-color: #1f272f;
   --square-color: linear-gradient(#303030, #757575);
   --circle-color: linear-gradient(#c2e7db, #63a791);
   --triangle-color: linear-gradient(#e1d3c9, #bea791);
@@ -61,6 +61,29 @@ body {
   backdrop-filter: blur(2rem);
   border: 0.1rem solid rgb(255, 255, 255);
   z-index: 3;
+  position: relative;
+}
+
+.circle1 {
+  background-color: #e7e7e7;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  filter: brightness(3);
+}
+
+.circle2 {
+  background-color: #e7e7e7;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  filter: blur(2rem);
 }
 
 .login-part {
@@ -69,11 +92,11 @@ body {
 
 .name h1 {
   background: linear-gradient(
-    9deg,
+    90deg,
     rgb(113, 72, 159) 0%,
-    rgb(50, 35, 117) 9%,
-    rgb(60, 50, 144) 20%,
-    rgb(47, 68, 155) 24%,
+    rgb(84, 63, 177) 9%,
+    rgb(38, 27, 140) 20%,
+    rgb(22, 52, 172) 24%,
     rgb(32, 89, 133) 35%,
     rgb(46, 141, 156) 44%,
     rgb(49, 148, 143) 50%,
@@ -86,11 +109,13 @@ body {
   -webkit-text-fill-color: transparent;
   font-family: Zeyada;
   font-size: 5rem;
+  height: 6rem;
   filter: brightness(2.5);
 }
 
 .welcome-msg h1 {
   color: #fff;
+  font-family: "EB Garamond", serif;
   font-size: 3rem;
   font-weight: 400;
   letter-spacing: 0.15rem;
@@ -98,6 +123,8 @@ body {
 }
 
 .arrorra {
+  font-family: "EB Garamond", serif;
+  font-size: 4rem;
   font-weight: 700;
   color: #f1c27d;
 }
@@ -123,7 +150,7 @@ body {
 #user-password,
 #confirm-user-password {
   border-radius: 1rem;
-  background-color: #222;
+  background-color: var(--body-bg-color);
   border: 1px solid #fff;
   color: #fff;
   letter-spacing: 0.2rem;
@@ -161,14 +188,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   word-spacing: 0.2rem;
-  color: #222;
-  color: 1f1f1f;
+  color: var(--body-bg-color);
   cursor: pointer;
   padding: 1.5rem;
   margin-bottom: 0.8rem;
   border-radius: 1.5rem;
   font-size: 1.7rem;
-  font-weight: 700;
+  font-weight: 1000;
   border: none;
   width: 46%;
   top: 50%;
