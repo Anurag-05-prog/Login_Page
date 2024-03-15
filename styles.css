@@ -192,19 +192,25 @@ input:active {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   word-spacing: 0.2rem;
-  color: var(--body-bg-color);
+  color: #fff;
+  background-color: var(--body-bg-color);
   cursor: pointer;
   padding: 1.5rem;
   margin-bottom: 0.8rem;
   border-radius: 1.5rem;
   font-size: 1.7rem;
   font-weight: 1000;
-  border: none;
-  width: 46%;
+  border: 1.5px solid #f1c27d;
+  width: 45%;
   top: 50%;
   right: 50%;
   transform: translateX(50%);
   transform: translateY(50%);
+}
+
+.btn-login-primary {
+  text-shadow: 0 0 1px #fff;
+  box-shadow: 0.12rem 0.12rem 0.1rem #f1c27d;
 }
 
 .btn-login-secondary {
@@ -212,6 +218,8 @@ input:active {
   left: 0.5rem;
   opacity: 0;
   background-color: #f1c27d;
+  color: var(--body-bg-color);
+  text-shadow: 0 0 0.5px #1f272f;
 }
 
 .login-btn button {
@@ -282,6 +290,7 @@ hr {
 }
 
 #login-link {
+  font-weight: 700;
   color: #f1c27d;
   cursor: pointer;
 }
